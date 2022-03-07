@@ -10,7 +10,7 @@ namespace TARgv20
         {
             InitializeComponent(); //dlja xml
 
-            MainPage = new MainPage(); //zamena nachalnoj stranicy
+            MainPage = new NavigationPage(new MainPage()); //zamena nachalnoj stranicy
         }
 
         protected override void OnStart()
