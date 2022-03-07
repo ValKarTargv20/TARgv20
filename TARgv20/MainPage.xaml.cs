@@ -17,13 +17,27 @@ namespace TARgv20
                 Text = "BoxView",
                 BackgroundColor = Color.Aquamarine
             };
+
+            Button entry_btn = new Button
+            {
+                Text = "Enrty",
+                BackgroundColor = Color.Red
+            };
+            entry_btn.Clicked += Entry_btn_Clicked;
+
             StackLayout st = new StackLayout
             {
-                Children = { box_btn }
+                Children = { box_btn, entry_btn }
             };
             st.BackgroundColor = Color.Black;
             Content = st;
         }
+
+        private async void Entry_btn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Entry_Page());
+        }
+
         private async void Box_btn_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Box_Page());
