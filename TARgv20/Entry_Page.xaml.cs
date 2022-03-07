@@ -25,7 +25,8 @@ namespace TARgv20
             {
                 Placeholder = "Sisesta mingi text siia",
                 TextColor = Color.Black,
-                BackgroundColor = Color.Yellow
+                BackgroundColor = Color.Yellow,
+                Keyboard = Keyboard.Email //dlja klaviatury, pozvoljaet usovershenstvovat' klaviaturu i dobavit' @
             };
             editor.TextChanged += Editor_TextChanged;
             StackLayout st = new StackLayout { Children = { editor, lbl } };
@@ -40,7 +41,7 @@ namespace TARgv20
             if (k == 'T')
             {
                 i++;
-                lbl.Text=k.ToString()+": "+i+" korda oli sisestatud"
+                lbl.Text = k.ToString() + ": " + i + " korda oli sisestatud";
             }
             editor.TextChanged += Editor_TextChanged;
         }
